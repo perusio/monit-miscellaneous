@@ -13,6 +13,11 @@ set daemon  120           # check services at 2-minute intervals
 ## a standalone log file instead, specify the full path to the log file
 set logfile syslog facility log_daemon
 
+## Set the list of mail servers for alert delivery. Multiple servers may be
+## specified using a comma separator. By default Monit uses port 25 - it is
+## possible to override this with the PORT option. 
+set mailserver localhost # primary mailserver
+
 ## Alert root. There should be a forward from root to a non-privileged
 ## user.
 set alert root@localhost
