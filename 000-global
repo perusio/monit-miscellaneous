@@ -1,0 +1,28 @@
+# -*- mode: conf; mode: flyspell; ispell-current-dictionary: american -*-
+
+### Global Monit configurations. This file has 000 prepended to its
+### name so that is the first to be loaded by monit.
+
+## Start Monit in the background (run as a daemon):
+set daemon  120           # check services at 2-minute intervals
+    with start delay 240  # optional: delay the first check by 4-minutes (by
+                          # default Monit check immediately after Monit start)
+
+## Set syslog logging with the 'daemon' facility. If the FACILITY option is
+## omitted, Monit will use 'user' facility by default. If you want to log to
+## a standalone log file instead, specify the full path to the log file
+set logfile syslog facility log_daemon
+
+## Alert root. There should be a forward from root to a non-privileged
+## user.
+set alert root@localhost
+
+## By default Monit will drop alert events if no mail servers are available.
+## If you want to keep the alerts for later delivery retry, you can use the
+## EVENTQUEUE statement. The base directory where undelivered alerts will be
+## stored is specified by the BASEDIR option. You can limit the maximal queue
+## size using the SLOTS option (if omitted, the queue is limited by space
+## available in the back end filesystem).
+set eventqueue
+    basedir /var/monit  # set the base directory where events will be stored
+    slots 100           # optionally limit the queue size
