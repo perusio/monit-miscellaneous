@@ -7,8 +7,7 @@ check process nginx with pidfile /var/run/nginx.pid
   stop program  = "/etc/init.d/nginx stop"
   ## Test port 80 and request the server status page. Restart if the
   ## server is down.
-  if failed port 80 protocol http and request "/nginx_status" then
-     restart
+  if failed port 80 protocol http then restart
   ## If the restarts attempts fail then alert.   
   if 3 restarts within 5 cycles then timeout
   alert root@localhost only on {timeout}    
