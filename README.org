@@ -1,0 +1,29 @@
+* Monit configuration files
+
+** Introduction
+
+   This is a bunch of monit configuration files for monitoring a
+   variety of things. 
+
+** Installation
+
+   Copy the file(s) you're interested to =/etc/monit/conf.d=. Start or
+   restart monit. Note that I'm assuming a Debian like directory
+   hierarchy. =/etc -> /etc/monit/ -> /etc/monit/conf.d=
+
+   The base configuration file =/etc/monit/monitrc= has as
+   last statement the inclusion of all files in the =conf.d=
+   subdirectory of =/etc/monit=.
+
+   There's no tampering with the package installed =monitrc=. Instead
+   all global settings are defined in a =000-global= file that due to
+   its name is the first to be included in =monitrc= therefore making
+   all statements there affect all other configuration files.
+
+** Alerts
+
+   All alerts are sent to =root@localhost= you should either/or define
+   an alias/forward for root or alter the address in =000-global=.
+
+   The mailserver is also localhost in port 25. Change it if necessary
+   for your mail setup.
