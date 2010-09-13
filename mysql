@@ -19,20 +19,20 @@ check process mysql with pidfile /var/run/mysqld/mysqld.pid
 
 ## Test the mysqld binary.
 
-check file mysqld with path /usr/sbin/mysqld
-   group mysql
-   if failed checksum then unmonitor
-   if failed permission 755 then unmonitor
-   if failed uid root then unmonitor
-   if failed gid root then unmonitor
-   alert   
+# check file mysqld with path /usr/sbin/mysqld
+#    group mysql
+#    if failed checksum then unmonitor
+#    if failed permission 755 then unmonitor
+#    if failed uid root then unmonitor
+#    if failed gid root then unmonitor
+#    alert   
 
-## Test the init scripts.
+# ## Test the init scripts.
 
-check file mysql_init with path /etc/init.d/mysql
-   group mysql
-   if failed checksum then unmonitor
-   if failed permission 755 then unmonitor
-   if failed uid root then unmonitor
-   if failed gid root then unmonitor
-   alert 
+# check file mysql_init with path /etc/init.d/mysql
+#    group mysql
+#    if failed checksum then unmonitor
+#    if failed permission 755 then unmonitor
+#    if failed uid root then unmonitor
+#    if failed gid root then unmonitor
+#    alert 
