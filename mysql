@@ -18,6 +18,7 @@ check process mysql with pidfile /var/run/mysqld/mysqld.pid
 
 
 ## Test the mysqld binary.
+
 check file mysqld with path /usr/sbin/mysqld
    group mysql
    if failed checksum then unmonitor
@@ -27,6 +28,7 @@ check file mysqld with path /usr/sbin/mysqld
    alert   
 
 ## Test the init scripts.
+
 check file mysql_init with path /etc/init.d/mysql
    group mysql
    if failed checksum then unmonitor
