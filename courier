@@ -123,7 +123,7 @@ check file courier-auth-init with path /etc/init.d/courier-authdaemon
    alert root@localhost  
 
 ## The authorization daemon binary.
-check file courier-auth-bin with path /usr/sbin/authdaemon
+check file courier-auth-bin with path /usr/sbin/authdaemond
    group courier
    if failed checksum then unmonitor
    if failed permission 755 then unmonitor
