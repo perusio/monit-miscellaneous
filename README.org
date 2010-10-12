@@ -5,6 +5,33 @@
    This is a bunch of monit configuration files for monitoring a
    variety of things. 
 
+** Monitored services
+
+   1. Courier
+
+   2. Exim
+
+   3. Memcached
+
+   4. MySQL
+
+   5. Nginx
+
+   6. php-cgi (FastCGI)
+
+   7. Postfix
+
+   8. SSH
+
+** Web interface
+
+   The web interface is setup in the =000-global= file. The current
+   setup is the one I use my dev machine setup. This is a standalone
+   firewalled machine.
+
+   If on the Internet then you **should** use a [[http://mmonit.com/wiki/Monit/EnableSSLInMonit][SSL setup]] for the web
+   interface.
+
 ** Installation
 
    Copy the file(s) you're interested to =/etc/monit/conf.d=. Start or
