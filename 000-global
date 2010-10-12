@@ -31,3 +31,12 @@ set alert root@localhost
 set eventqueue
     basedir /var/monit  # set the base directory where events will be stored
     slots 100           # optionally limit the queue size
+
+
+## Monit has an embedded web server which can be used to view status of
+## services monitored and manage services from a web interface. See the
+## Monit Wiki if you want to enable SSL for the web server.
+set httpd port 2812 and
+    use address localhost  # only accept connection from localhost
+    allow localhost        # allow localhost to connect to the server and
+    allow appa:MntT126     # require user 'admin' with password 'monit'
