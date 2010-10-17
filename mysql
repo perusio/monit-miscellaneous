@@ -8,7 +8,10 @@ check process mysql with pidfile /var/run/mysqld/mysqld.pid
    group mysql
    start program = "/etc/init.d/mysql start"
    stop program = "/etc/init.d/mysql stop"
-   if failed port 3306 protocol mysql then restart
+   # *** Enable the line below for TCP socket support. ***
+   # if failed port 3306 protocol mysql then restart
+   # This uses UNIX sockets.
+   if failed unixsocket /var/run/mysqld/mysqld.sock then restart
    if 3 restarts within 5 cycles then timeout
    # This process check depends on checking the binary if the MySQL
    # daemon and the init script.

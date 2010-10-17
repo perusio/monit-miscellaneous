@@ -13,7 +13,8 @@
 
    3. Memcached
 
-   4. MySQL
+   4. MySQL: the default setup uses UNIX sockets. It has also the support
+      for TCP sockets commented out. 
 
    5. Nginx
 
