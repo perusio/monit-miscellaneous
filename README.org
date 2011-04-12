@@ -20,6 +20,8 @@
 
    6. php-cgi (FastCGI)
 
+   7. php-fpm (FastCGI Process Manager)   
+
    7. Postfix
 
    8. SSH
