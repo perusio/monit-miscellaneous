@@ -3,7 +3,7 @@
 ** Introduction
 
    This is a bunch of monit configuration files for monitoring a
-   variety of things. 
+   variety of things.
 
 ** Monitored services
 
@@ -14,17 +14,19 @@
    3. Memcached
 
    4. MySQL: the default setup uses UNIX sockets. It has also the support
-      for TCP sockets commented out. 
+      for TCP sockets commented out.
 
    5. Nginx
 
    6. php-cgi (FastCGI)
 
-   7. php-fpm (FastCGI Process Manager)   
+   7. php-fpm (FastCGI Process Manager)
 
    7. Postfix
 
    8. SSH
+
+   9. thttpd
 
 ** Web interface
 
