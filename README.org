@@ -20,13 +20,15 @@
 
    6. php-cgi (FastCGI)
 
-   7. php-fpm (FastCGI Process Manager)
+   7. php-fpm (FastCGI Process Manager) with UNIX domain sockets
 
-   7. Postfix
+   8. php-fpm (FastCGI Process Manager) with TCP sockets
 
-   8. SSH
+   9. Postfix
 
-   9. thttpd
+   10. SSH
+
+   11. thttpd
 
 ** Web interface
 
