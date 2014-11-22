@@ -9,8 +9,8 @@ check process php5-fpm-unix with pidfile /var/run/php5-fpm.pid
   if failed unixsocket /var/run/php-fpm.sock then restart
   ## If the restarts attempts fail then alert.
   if 3 restarts within 5 cycles then timeout
-  depends on php5-fpm-unix_bin
-  depends on php5-fpm-unix_init
+  depends on php5-fpm_bin
+  depends on php5-fpm_init
   alert root@localhost only on {timeout}
 
 ## Test the php5-fpm binary.
